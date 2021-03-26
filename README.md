@@ -1,0 +1,2 @@
+# leetcode
+Useless algorithm
