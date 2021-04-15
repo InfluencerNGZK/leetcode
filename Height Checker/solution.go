@@ -1,4 +1,10 @@
-func sortArray (res []int) {
+package main
+
+import (
+	"fmt"
+)
+
+func sortArray(res []int) {
 	for j := 0; j < len(res); j++ {
 		for k := 1; k < len(res)-j; k++ {
 			if res[k] < res[k-1] {
@@ -21,4 +27,19 @@ func heightChecker(heights []int) int {
 		}
 	}
 	return count
+}
+
+func main() {
+	for {
+		var numsSize, inputNum int
+		fmt.Scan(&numsSize)
+		var numsList []int
+		for j := 0; j < numsSize; j++ {
+			fmt.Scan(&inputNum)
+			numsList = append(numsList, inputNum)
+		}
+		result := 0
+		result = heightChecker(numsList)
+		fmt.Println(result)
+	}
 }
