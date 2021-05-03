@@ -10,7 +10,7 @@ func inorderTraversal(root *TreeNode) []int {
 	if root == nil {
 		return nil
 	}
-	nums := []int{}
+	var nums []int
 	nums = append(nums, inorderTraversal(root.Left)...)
 	nums = append(nums, root.Val)
 	nums = append(nums, inorderTraversal(root.Right)...)
