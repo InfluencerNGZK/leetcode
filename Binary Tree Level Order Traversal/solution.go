@@ -7,11 +7,11 @@ type TreeNode struct {
 }
 
 func levelOrder(root *TreeNode) [][]int {
-	levels := [][]int{}
+	var levels [][]int
 	current := []*TreeNode{root}
-	next := []*TreeNode{}
+	var next []*TreeNode
 	for {
-		level := []int{}
+		var level []int
 		for _, c := range current {
 			if c == nil {
 				continue
